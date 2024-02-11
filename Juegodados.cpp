@@ -15,52 +15,61 @@ int main(){
     int Dado2 = 0;
     int Dado3 = 0;
     int Dado4 = 0;
+    string respuesta;
 
-    srand(time(NULL));
-    Dado1 = 1+(rand()%(7-1));
-    Dado2 = 1+(rand()%(7-1));
-    Dado3 = 1+(rand()%(7-1));
-    Dado4 = 1+(rand()%(7-1));
+    do {
+        
+        srand(time(NULL));
+        Dado1 = 1+(rand()%(7-1));
+        Dado2 = 1+(rand()%(7-1));
+        Dado3 = 1+(rand()%(7-1));
+        Dado4 = 1+(rand()%(7-1));
 
-    cout<<"Juego de los Dados"<<endl;
+    
 
-    cout<<"Primer Lanzamiento"<<endl;
+        cout<<"Juego de los Dados"<<endl;
 
-    Lanzamiento1 = Dado1;
-    Lanzamiento2 = Dado2;
+        cout<<"Primer Lanzamiento"<<endl;
 
-    Resultado1 = Lanzamiento1 + Lanzamiento2;
+        Lanzamiento1 = Dado1;
+        Lanzamiento2 = Dado2;
 
-    cout<<"El primer lanzamiento da como resultado: "<<Lanzamiento1<<endl;
-    cout<<"El segundo lanzamiento da como resultado: "<<Lanzamiento2<<endl;
-    cout<<"El resultado de la suma de los dados es: "<<Resultado1<<endl;
+        Resultado1 = Lanzamiento1 + Lanzamiento2;
 
-    if (Resultado1 == 7 || Resultado1 == 11){
-        cout<<"Felicitaciones ¡Has ganado!"<<endl;
-    }else if (Resultado1 == 2 || Resultado1 == 3 || Resultado1 == 12){
-        cout<<"Oh noooo has perdido :("<<endl;
-    }else {
-        cout<<"El jugador pasa a tiros secundarios"<<endl;
+        cout<<"El primer lanzamiento da como resultado: "<<Lanzamiento1<<endl;
+        cout<<"El segundo lanzamiento da como resultado: "<<Lanzamiento2<<endl;
+        cout<<"El resultado de la suma de los dados es: "<<Resultado1<<endl;
 
-        Lanzamiento3 = Dado3;
-        Lanzamiento4 = Dado4;
-
-        Resultado2 = Lanzamiento3 + Lanzamiento4;
-
-        cout<<"El primer lanzamiento da como resultado: "<<Lanzamiento3<<endl;
-        cout<<"El segundo lanzamiento da como resultado: "<<Lanzamiento4<<endl;
-        cout<<"El resultado de la suma de los dados es: "<<Resultado2<<endl;
-
-        if (Resultado2 == Resultado1){
+        if (Resultado1 == 7 || Resultado1 == 11){
             cout<<"Felicitaciones ¡Has ganado!"<<endl;
-        }else if (Resultado2 == 7){
+        }else if (Resultado1 == 2 || Resultado1 == 3 || Resultado1 == 12){
             cout<<"Oh noooo has perdido :("<<endl;
         }else {
-            cout<<"Game over :("<<endl;
+            cout<<"El jugador pasa a tiros secundarios"<<endl;
+
+            Lanzamiento3 = Dado3;
+            Lanzamiento4 = Dado4;
+
+            Resultado2 = Lanzamiento3 + Lanzamiento4;
+
+            cout<<"El primer lanzamiento da como resultado: "<<Lanzamiento3<<endl;
+            cout<<"El segundo lanzamiento da como resultado: "<<Lanzamiento4<<endl;
+            cout<<"El resultado de la suma de los dados es: "<<Resultado2<<endl;
+
+            if (Resultado2 == Resultado1){
+                cout<<"Felicitaciones ¡Has ganado!"<<endl;
+            }else if (Resultado2 == 7){
+                cout<<"Oh noooo has perdido :("<<endl;
+            }else {
+                cout<<"Game over :("<<endl;
+            }
+
         }
 
-    }
+        cout<<"Desea volver a jugar? (si/no): "<<endl;
+        cin>>respuesta;
 
+    } while (respuesta == "si" || respuesta == "SI");
 
     return 0;
 }
