@@ -19,6 +19,8 @@ int main(){
     srand(time(NULL));
     Dado1 = 1+(rand()%(7-1));
     Dado2 = 1+(rand()%(7-1));
+    Dado3 = 1+(rand()%(7-1));
+    Dado4 = 1+(rand()%(7-1));
 
     cout<<"Juego de los Dados"<<endl;
 
@@ -45,8 +47,8 @@ int main(){
 
         Resultado2 = Lanzamiento3 + Lanzamiento4;
 
-        cout<<"El primer lanzamiento da como resultado: "<<Lanzamiento1<<endl;
-        cout<<"El segundo lanzamiento da como resultado: "<<Lanzamiento2<<endl;
+        cout<<"El primer lanzamiento da como resultado: "<<Lanzamiento3<<endl;
+        cout<<"El segundo lanzamiento da como resultado: "<<Lanzamiento4<<endl;
         cout<<"El resultado de la suma de los dados es: "<<Resultado2<<endl;
 
         if (Resultado2 == Resultado1){
