@@ -16,6 +16,7 @@ int main()
         Aumento = sueldo*0.15;
         Nuevosueldo = sueldo + Aumento;
         cout<<"Su nuevo sueldo es: "<<Nuevosueldo<<endl;
+        
     }else {
         cout<<"Su sueldo es mayor a 1000000, no tiene aumento :("<<endl;
     }
