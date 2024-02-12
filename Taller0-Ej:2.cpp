@@ -37,10 +37,12 @@ int main(){
             Descuento = compra*0.15;
             Total = compra-Descuento;
             cout<<"Su valor neto es de: "<<Total<<endl;
+
         }else if (compra >= 500000 && compra <= 1000000 ){
             Descuento = compra*0.20;
             Total = compra-Descuento;
             cout<<"Su valor neto es de: "<<Total<<endl;
+            
         }else if (compra > 1000000){
             Descuento = compra*0.25;
             Total = compra-Descuento;
